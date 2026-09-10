@@ -92,20 +92,20 @@ poetry run python -m app.vector_store_qdrant
 poetry run python compare_vector_dbs.py "What is RAG?"
 ```
 
-Actual result (17 chunks indexed in both):
+Actual result (40 chunks indexed in both):
 
 ```
-=== ChromaDB (315.0 ms) ===
-  source=intro_to_rag.txt distance=0.6910
-  source=intro_to_rag.txt distance=0.7372
-  source=intro_to_rag.txt distance=0.7460
-  source=vector_database_and_embeddings.txt distance=0.8465
+=== ChromaDB (238.0 ms) ===
+  source=006_Creating_a_Backup_of_Important_Files.txt distance=0.5023
+  source=006_Creating_a_Backup_of_Important_Files.txt distance=0.5025
+  source=006_Creating_a_Backup_of_Important_Files.txt distance=0.5267
+  source=006_Creating_a_Backup_of_Important_Files.txt distance=0.6129
 
-=== Qdrant (27.9 ms) ===
-  source=intro_to_rag.txt score=0.6545
-  source=intro_to_rag.txt score=0.6314
-  source=intro_to_rag.txt score=0.6270
-  source=vector_database_and_embeddings.txt score=0.5767
+=== Qdrant (29.2 ms) ===
+  source=006_Creating_a_Backup_of_Important_Files.txt score=0.7489
+  source=006_Creating_a_Backup_of_Important_Files.txt score=0.7488
+  source=006_Creating_a_Backup_of_Important_Files.txt score=0.7366
+  source=006_Creating_a_Backup_of_Important_Files.txt score=0.6935
 ```
 
 Same 4 chunks, same order, from both — retrieval is correct either way. Differences: Qdrant was ~11x faster on this small dataset; ChromaDB reports distance (lower = closer) while Qdrant here reports cosine score (higher = closer), so the numbers aren't on the same scale; and ChromaDB persists automatically to a local folder, while Qdrant's data lives only inside its Docker container unless you mount a volume (`-v "$(pwd)/qdrant_storage:/qdrant/storage"`).
