@@ -1,0 +1,38 @@
+**Resetting a Forgotten PIN**
+
+If you have forgotten your PIN, you can reset it using the following steps:
+
+**Step 1: Access the PIN Reset Tool**
+
+1. Go to the company's intranet homepage and click on the "IT Support" link at the top right corner of the page.
+2. Click on the "Self-Service" tab and then select "PIN Reset" from the drop-down menu.
+3. You will be redirected to the PIN Reset Tool login page.
+
+**Step 2: Authenticate with Your Credentials**
+
+1. Enter your company username and password in the required fields.
+2. Click the "Login" button to authenticate.
+
+**Step 3: Verify Your Identity**
+
+1. You will be prompted to answer your security question. Enter your answer in the required field.
+2. Click the "Next" button to proceed.
+
+**Step 4: Reset Your PIN**
+
+1. Enter a new PIN in the required field. The PIN must be at least 8 characters long and contain a mix of uppercase and lowercase letters, numbers, and special characters.
+2. Re-enter your new PIN in the confirmation field to ensure accuracy.
+3. Click the "Reset PIN" button to complete the process.
+
+**Step 5: Confirm PIN Reset**
+
+1. You will receive a confirmation message indicating that your PIN has been successfully reset.
+2. Click the "OK" button to close the message.
+
+**Important Notes:**
+
+* If you are unable to reset your PIN using the self-service tool, please contact the IT Helpdesk for assistance.
+* It is recommended to keep your PIN confidential and not share it with anyone.
+* You can reset your PIN a maximum of 3 times in a 24-hour period. If you exceed this limit, you will need to contact the IT Helpdesk to reset your PIN.
+
+By following these steps, you should be able to reset your forgotten PIN and regain access to company systems and applications. If you encounter any issues during the process, please do not hesitate to reach out to the IT Helpdesk for further assistance.

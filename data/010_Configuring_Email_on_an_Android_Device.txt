@@ -1,0 +1,64 @@
+**Configuring Email on an Android Device**
+
+This article provides step-by-step instructions on how to configure email on an Android device. Please follow the steps below to set up your email account on your Android device.
+
+**Prerequisites:**
+
+* An Android device with a valid internet connection
+* A valid email account (company email or personal email)
+* Email account credentials (username and password)
+
+**Step 1: Go to the Email App**
+
+* Locate the Email app on your Android device. It may be on the home screen or in the app drawer.
+* Tap on the Email app to open it.
+
+**Step 2: Add a New Account**
+
+* Tap on the "Add account" or "Add email account" button.
+* Select "Email" or "Corporate" as the account type, depending on your email provider.
+* Enter your email address and password in the required fields.
+* Tap "Next" to proceed.
+
+**Step 3: Configure Server Settings**
+
+* The device will attempt to automatically configure the server settings. If it fails, you will need to enter the settings manually.
+* Tap on "Manual setup" or "Advanced setup" to enter the server settings manually.
+* Enter the following information:
+	+ Incoming server: [company email server or personal email server]
+	+ Port: [company email port or personal email port]
+	+ Security type: [company email security type or personal email security type]
+	+ Username: [your email address]
+	+ Password: [your email password]
+* Tap "Next" to proceed.
+
+**Step 4: Configure Outgoing Server Settings**
+
+* Enter the following information:
+	+ Outgoing server: [company email server or personal email server]
+	+ Port: [company email port or personal email port]
+	+ Security type: [company email security type or personal email security type]
+	+ Username: [your email address]
+	+ Password: [your email password]
+* Tap "Next" to proceed.
+
+**Step 5: Account Options**
+
+* You may be prompted to configure additional account options, such as:
+	+ Sync frequency: Choose how often you want your device to sync with the email server.
+	+ Sync size: Choose the maximum size of emails to sync.
+	+ Delete email from server: Choose whether to delete emails from the server after syncing.
+* Tap "Next" to proceed.
+
+**Step 6: Account Setup Complete**
+
+* You will be prompted to give your account a name and set it as the default account.
+* Tap "Done" to complete the setup.
+
+**Troubleshooting Tips:**
+
+* If you encounter any issues during the setup process, try restarting the Email app or your device.
+* Ensure that your email account credentials are correct and that your internet connection is stable.
+* If you are still experiencing issues, contact the IT helpdesk for further assistance.
+
+By following these steps, you should be able to successfully configure email on your Android device.

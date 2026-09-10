@@ -1,0 +1,52 @@
+**Troubleshooting Issues with Company-Issued Tablets**
+
+This article provides step-by-step guidance for troubleshooting common issues with company-issued tablets. Please follow the steps outlined below to resolve the issue before escalating to advanced support.
+
+**Step 1: Power Cycle the Tablet**
+
+* Press and hold the power button until the tablet shuts down.
+* Wait for 30 seconds to allow any residual power to drain.
+* Press the power button again to turn the tablet back on.
+* Observe if the issue persists.
+
+**Step 2: Check for Software Updates**
+
+* Ensure the tablet is connected to a stable internet connection.
+* Go to **Settings** > **System** > **System Update**.
+* Check for available software updates and install any pending updates.
+* Restart the tablet after installation.
+
+**Step 3: Restart in Safe Mode**
+
+* Press and hold the power button until the tablet shuts down.
+* Press the power button again to turn the tablet back on.
+* Immediately hold down the **Volume Down** button until the tablet boots into safe mode.
+* Observe if the issue persists in safe mode.
+
+**Step 4: Check for App-Related Issues**
+
+* Identify the app that is experiencing issues.
+* Go to **Settings** > **Apps** > **[App Name]**.
+* Clear the app's cache and data.
+* Restart the app to see if the issue is resolved.
+
+**Step 5: Perform a Factory Reset**
+
+* Go to **Settings** > **System** > **Advanced** > **Reset Options**.
+* Select **Erase all data (factory reset)**.
+* Follow the prompts to complete the reset process.
+* Note: This step will erase all data on the tablet, so ensure that all important data is backed up before proceeding.
+
+**Step 6: Check for Hardware Issues**
+
+* Inspect the tablet for any signs of physical damage or wear.
+* Check the charging port and ensure it is free from debris.
+* Try using a different charging cable or power source.
+
+**Step 7: Gather Diagnostic Information**
+
+* Go to **Settings** > **System** > **About Tablet**.
+* Take note of the tablet's operating system version, device ID, and any error messages.
+* Provide this information to advanced support if the issue cannot be resolved through these troubleshooting steps.
+
+If none of the above steps resolve the issue, please escalate the issue to advanced support, providing as much detail as possible about the problem and the steps taken so far.

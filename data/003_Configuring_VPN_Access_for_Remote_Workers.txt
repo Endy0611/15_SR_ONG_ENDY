@@ -1,0 +1,50 @@
+**Configuring VPN Access for Remote Workers**
+
+**Overview**
+
+This article provides step-by-step instructions for configuring VPN access for remote workers. This allows employees working from home or other remote locations to securely connect to the company network and access company resources.
+
+**Prerequisites**
+
+* The remote worker's device (laptop or desktop) must meet the company's minimum system requirements for VPN connectivity.
+* The remote worker must have a valid company login credentials.
+* The remote worker must have a stable internet connection.
+
+**Step 1: Install the VPN Client**
+
+1. Go to the company's software portal and download the VPN client software.
+2. Run the installer and follow the prompts to install the software.
+3. Once installed, launch the VPN client software.
+
+**Step 2: Configure the VPN Connection**
+
+1. In the VPN client software, click on "New Connection" and select "Company VPN" as the connection type.
+2. Enter the company's VPN server address: `vpn.company.com`.
+3. Enter your company login credentials (username and password).
+4. Select the "Save" button to save the connection settings.
+
+**Step 3: Establish the VPN Connection**
+
+1. Click on the "Connect" button to establish the VPN connection.
+2. You may be prompted to authenticate with two-factor authentication (2FA). Follow the prompts to complete 2FA.
+3. Once connected, you will see a confirmation message indicating that you are connected to the company VPN.
+
+**Step 4: Verify VPN Connection**
+
+1. Open a web browser and navigate to `company.com`.
+2. You should be able to access company resources, such as email, intranet, and file shares.
+3. Verify that your device's IP address has changed to a company-assigned IP address.
+
+**Troubleshooting Tips**
+
+* If you encounter issues connecting to the VPN, ensure that your device meets the minimum system requirements and that your internet connection is stable.
+* If you are unable to access company resources, verify that you are connected to the VPN and that your device's IP address has changed to a company-assigned IP address.
+* If you continue to experience issues, contact the IT helpdesk for further assistance.
+
+**Security Reminders**
+
+* Always keep your VPN client software up-to-date.
+* Never share your login credentials with anyone.
+* Avoid using public Wi-Fi or unsecured networks to access company resources via VPN.
+
+By following these steps, remote workers can securely connect to the company network and access company resources from anywhere. If you have any questions or issues, please contact the IT helpdesk for further assistance.

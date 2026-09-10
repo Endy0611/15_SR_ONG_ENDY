@@ -1,0 +1,48 @@
+To set up a conference call on Cisco Webex, follow these steps:
+
+**Step 1: Log in to Cisco Webex**
+
+Open a web browser and navigate to [company Webex URL]. Enter your company login credentials to access the Webex portal.
+
+**Step 2: Schedule a Meeting**
+
+Click on the "Meetings" tab and select "Schedule a Meeting" from the drop-down menu. Fill in the required information, including:
+
+* Meeting topic
+* Start and end time
+* Duration
+* Invitees (add email addresses or names from the company directory)
+
+**Step 3: Configure Audio Settings**
+
+In the "Audio" section, select "Cisco Webex Audio" as the default audio type. You can also choose to allow participants to join via phone or VoIP.
+
+**Step 4: Set Up Video Settings (Optional)**
+
+If you want to enable video conferencing, click on the "Video" tab and select "Cisco Webex Video" as the default video type. You can also choose to allow participants to join via video.
+
+**Step 5: Add Agenda and Notes (Optional)**
+
+You can add an agenda and notes to the meeting invitation by clicking on the "Agenda" tab. This information will be visible to all invitees.
+
+**Step 6: Send Invitations**
+
+Click "Schedule" to send the meeting invitation to all invitees. The invitation will include a link to join the meeting, as well as dial-in information for audio-only participants.
+
+**Step 7: Start the Meeting**
+
+At the scheduled start time, click on the "Start" button to begin the conference call. As the host, you will be prompted to enter your audio and video settings before joining the meeting.
+
+**Tips and Best Practices**
+
+* Make sure to test your audio and video settings before the meeting to ensure a smooth experience.
+* Encourage invitees to join the meeting 5-10 minutes early to troubleshoot any technical issues.
+* Use the "Mute" feature to minimize background noise and ensure clear audio.
+* Use the "Share" feature to share your screen or presentations with participants.
+
+**Troubleshooting**
+
+* If you encounter issues joining the meeting, try restarting your browser or checking your internet connection.
+* If you experience audio or video issues during the meeting, try restarting your audio or video settings or contacting the IT helpdesk for assistance.
+
+By following these steps, you can successfully set up and host a conference call on Cisco Webex. If you have any further questions or issues, please contact the IT helpdesk for assistance.
