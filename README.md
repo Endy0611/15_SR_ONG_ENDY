@@ -67,13 +67,18 @@ poetry run python compare_chunking.py
 
 | File | Fixed-size chunks | Paragraph-aware chunks |
 |---|---|---|
-| advanced_rag.txt | 4 | 4 |
-| chunking_strategy.txt | 3 | 4 |
-| intro_to_rag.txt | 3 | 4 |
-| prompt_building_generate.txt | 3 | 4 |
-| vector_database_and_embeddings.txt | 4 | 5 |
+| 001_Setting_Up_a_Mobile_Device_for_Company_Email.txt | 4 | 4 |
+| 002_Resetting_a_Forgotten_PIN.txt | 3 | 3 |
+| 003_Configuring_VPN_Access_for_Remote_Workers.txt | 4 | 4 |
+| 004_Troubleshooting_Issues_with_Microsoft_Office.txt | 5 | 4 |
+| 005_Setting_Up_a_Conference_Call_on_Cisco_Webex.txt | 4 | 4 |
+| 006_Creating_a_Backup_of_Important_Files.txt | 4 | 4 |
+| 007_Troubleshooting_Issues_with_Company-Issued_Tablets.txt | 4 | 4 |
+| 008_Setting_Up_a_Secure_Wireless_Network.txt | 4 | 4 |
+| 009_Resetting_a_Jammed_Printer.txt | 4 | 4 |
+| 010_Configuring_Email_on_an_Android_Device.txt | 4 | 5 |
 
-The paragraph-aware strategy produces one extra chunk on 4 of 5 files — it ends a chunk earlier rather than merge across a paragraph boundary, trading a slightly higher chunk count for never splitting a paragraph mid-sentence.
+The paragraph-aware strategy produces the same chunk count as fixed-size on most files, one fewer on `004` (it merges more content per paragraph before splitting), and one more on `010` (it ends a chunk earlier rather than merge across a paragraph boundary). Overall it trades a slightly different chunk count for never splitting a paragraph mid-sentence.
 
 ### 2. Compare two vector databases
 
@@ -111,7 +116,7 @@ Done in `app/main.py`'s chat loop — each retrieved chunk's source, distance, a
 
 ### 4. "Not found" fallback when no strong match
 
-Done in `app/pipeline.py` via `DISTANCE_THRESHOLD` — confirmed working below (see "what is API Gateway?").
+Done in `app/pipeline.py` via `DISTANCE_THRESHOLD` — confirmed working below (see "what is rag?" on the IT-support dataset, where no chunk falls under the threshold).
 
 ---
 
@@ -127,39 +132,34 @@ For an improvement, I'd add re-ranking: retrieve a wider top-k with the embeddin
 
 ## Test Log
 
-Ran via `poetry run python -m app.main`.
+Ran via `poetry run python -m app.main` on the IT-support ticket dataset (001–010).
 
 ### Q1 (on-topic)
-**Question:** What is rag?
-**Retrieved:** intro_to_rag.txt (0.6910), intro_to_rag.txt (0.7372), intro_to_rag.txt (0.7460), vector_database_and_embeddings.txt (0.8465)
-**Answer:** RAG (Retrieval-Augmented Generation) is a technique that combines a language model with an external knowledge source so that answers are grounded in real documents instead of relying only on what the model memorized during training. It has two main pipelines: an offline pipeline that processes documents into a vector database, and an online pipeline that retrieves relevant documents for answering questions.
-**Sources:** intro_to_rag.txt, vector_database_and_embeddings.txt
+**Question:** how to configuring email?
+**Retrieved:** 010_Configuring_Email_on_an_Android_Device.txt (0.5015), 010_Configuring_Email_on_an_Android_Device.txt (0.5019), 001_Setting_Up_a_Mobile_Device_for_Company_Email.txt (0.5627), 010_Configuring_Email_on_an_Android_Device.txt (0.5933)
+**Answer:** To configure email on an Android device: open the Email app, tap "Add account," select "Email" or "Corporate" as the account type, enter your email address and password, then configure server settings (the device may auto-configure; if needed, enter manual settings), and configure outgoing server settings.
+**Sources:** 001_Setting_Up_a_Mobile_Device_for_Company_Email.txt, 010_Configuring_Email_on_an_Android_Device.txt
 
 ### Q2 (on-topic)
-**Question:** what is vector_db?
-**Retrieved:** vector_database_and_embeddings.txt (0.4882), vector_database_and_embeddings.txt (0.6799), vector_database_and_embeddings.txt (0.7071), advanced_rag.txt (0.9020)
-**Answer:** A specialized storage system built to hold large numbers of vectors and search through them efficiently.
-**Sources:** advanced_rag.txt, vector_database_and_embeddings.txt
+**Question:** how to confguring vpn access for remote workers?
+**Retrieved:** 003_Configuring_VPN_Access_for_Remote_Workers.txt (0.2524, 0.5408, 0.6099, 0.6755) — all four top chunks from the same file
+**Answer:** To configure VPN access for remote workers: download and install the VPN client from the company's software portal, configure a new connection by selecting "Company VPN" as the connection type, enter the company's VPN server address and login credentials, save the connection settings, click "Connect" (may require two-factor authentication), and verify the connection by accessing company resources and checking for a company-assigned IP address.
+**Sources:** 003_Configuring_VPN_Access_for_Remote_Workers.txt
 
 ### Q3 (on-topic)
-**Question:** Difference between basic rag and advanced rag?
-**Retrieved:** intro_to_rag.txt (0.7349), advanced_rag.txt (0.7734), intro_to_rag.txt (0.7902), advanced_rag.txt (0.8051)
-**Answer:** Basic RAG (naive) keeps every stage simple: fixed-size chunking, a single embedding model, a single similarity search, and a single call to the language model. Advanced RAG adds extra stages such as re-ranking retrieved chunks, rewriting the user's query before searching, or combining multiple retrieval strategies to address weaknesses like poor retrieval precision or missed multi-part answers. These advanced techniques add complexity and extra latency due to additional model calls or search passes.
-**Sources:** advanced_rag.txt, intro_to_rag.txt
+**Question:** how to creating a backup file?
+**Retrieved:** 006_Creating_a_Backup_of_Important_Files.txt (0.4651, 0.5155, 0.5460, 0.6475) — all four top chunks from the same file
+**Answer:** Identify important files, choose a backup method (external hard drive, cloud service like OneDrive/Google Drive, network share, or USB drive), connect your backup device, copy files to the backup device, verify the backup, and schedule regular backups.
+**Sources:** 006_Creating_a_Backup_of_Important_Files.txt
 
 ### Q4 (on-topic)
-**Question:** different between vector and embedding?
-**Answer:** An embedding is a vector (list of numbers) that represents the meaning of text.
-**Note:** grounded correctly (no hallucination), but the source documents never explicitly contrast "vector" as a general term vs. "embedding" — so the answer only defines embedding rather than fully answering the comparison. A documentation gap, not an app bug.
-**Sources:** advanced_rag.txt, vector_database_and_embeddings.txt
+**Question:** how to set up plan for wireless network?
+**Retrieved:** 008_Setting_Up_a_Secure_Wireless_Network.txt (0.4568, 0.6994, 0.7132, 0.7192) — all four top chunks from the same file
+**Answer:** Before setting up a secure wireless network, plan your network infrastructure by identifying the number of users, devices, and access points required. Determine the type of encryption and authentication methods to be used. Consider the physical layout of your workspace and the range of your wireless signal.
+**Sources:** 008_Setting_Up_a_Secure_Wireless_Network.txt
 
 ### Q5 (off-topic / not in documents)
-**Question:** what is API Gateway?
-**Retrieved:** intro_to_rag.txt (1.0970), intro_to_rag.txt (1.1147), vector_database_and_embeddings.txt (1.1282), vector_database_and_embeddings.txt (1.1413) — all above `DISTANCE_THRESHOLD=1.0`
-**Answer:** I could not find this in your documents.
-**Sources:** (none)
-
-### Q6 (off-topic / not in documents)
-**Question:** what is water?
-**Answer:** I could not find this in your documents.
+**Question:** what is rag?
+**Retrieved:** 009_Resetting_a_Jammed_Printer.txt (1.0832, 1.1154, 1.1355, 1.2043) — all above `DISTANCE_THRESHOLD`, and irrelevant to the question (this dataset contains no RAG-concept documents, only IT-support tickets)
+**Answer:** I could not found this in your documents.
 **Sources:** (none)
